@@ -12,7 +12,7 @@ app.use(cors({
   origin: 'http://localhost:5173', // Replace with your frontend URL
   credentials: true,
 }));
-const url=process.env.MONGO_URI || 'mongodb://localhost:27017/mydatabase';
+const url=process.env.MONGODB_URI || 'mongodb://localhost:27017/mydatabase';
 connectDB(url)
 app.use(express.json()); // for parsing application/json
 app.use(express.urlencoded({ extended: true })); 
